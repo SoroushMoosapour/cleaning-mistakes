@@ -1,12 +1,39 @@
-name: test
+name: Node.js deployment
 
-on:
-    workflow_dispatch:
-        inputs:
-            username:
-                description: 'Your GitHub username'
-                required: true
-            reason:
-                description: 'Why are you running this workflow manually?'
-                required: true
-                default: 'I am running tests before implementing an automated workflow'
+on: #event
+  # عمومی
+  push: 
+    branches: [main, development, branch2, branch3,...]
+
+  #Scheduled events
+  schedule:
+    - cron:  '* * * */1 *'
+
+  #Manual events
+  workflow_dispatch:
+  repository_dispatch:
+
+  # Webhook events
+  issues:
+  pull_request:
+  push:
+  merge: 
+
+jobs:
+  
+  build_frontend: #name of the job
+
+    runs-on: ubuntu-latest # self-hosted
+    # windows-latest or windows-2019
+    # ubuntu-20.04
+    # ubuntu-latest or ubuntu-18.04
+    # ubuntu-16.04
+    # macOS-11.0
+
+    steps:
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+
+      - name: Checkout code
+        uses: actions/checkout@v2
