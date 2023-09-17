@@ -1,0 +1,16 @@
+{
+    "console-ninja.fontSize": 14,
+    "editor.fontSize": 20,
+    "scm.inputFontSize": 20,
+    "workbench.sash.size": 8,
+    "debug.console.fontSize": 20,
+    "markdown.preview.fontSize": 20,
+    "terminal.integrated.fontSize": 20,
+    "chat.editor.fontSize": 20,
+    "editor.accessibilityPageSize": 20,
+    "editor.scrollbar.horizontalScrollbarSize": 20,
+    "editor.scrollbar.verticalScrollbarSize": 20,
+    "editor.tabSize": 20,
+    "window.zoomLevel": 2,
+    "markdown.preview.lineHeight": 2
+}
